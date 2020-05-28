@@ -1,21 +1,17 @@
-= What?
+# What?
 
 Conferencing software in a Docker container.
 
-= Why ?
+# Why ?
 
 Some conferencing software is available as Debian/Ubuntu package.
 But I still don't like it on my computer as is.
 
-Skype is closed source software.
-Discord brings its own copy of Chromium, and hasn't gone through Debian scrutiny anyway.
-
-Other packages run scripts as root during install that I do not want to have elevated permissions.
-Most require dpkg instead of apt anyway.
-
+Skype is closed source software. Discord brings its own copy of Chromium, and hasn't gone through Debian scrutiny anyway. 
+Other packages run scripts as root during install that I do not want to have elevated permissions. Most require dpkg instead of apt anyway.
 Funny stuff may be compiled in.
 
-= Why not just...
+# Why not just...
 
 * run a privileged Docker container?
 * disable the sandbox?
@@ -23,7 +19,7 @@ Funny stuff may be compiled in.
 
 Well, my point is to (slightly) enhance security, not to decrease it.
 
-= Is this bullet-proof?
+# Is this bullet-proof?
 
 No. The kernel is still exposed to software downloaded from the web, as is some hardware and (part of) the file system.
 
@@ -32,11 +28,11 @@ We're just protecting ourselves from packages that don't clean up after themselv
 If you want bullet-proof, run conferencing software under full virtualization, or better yet, on separate hardware.
 (A smartphone comes to mind.) While you're at it, do the same with your browser.
 
-= How?
+# How?
 
 Run the software in Docker, but give it only what it needs.
 
-= No really, how?
+# No really, how?
 
 _These instructions are not suitable for copy-pasting._
 _You have to understand what they mean, and modify them accordingly._
@@ -47,8 +43,11 @@ _You have to understand what they mean, and modify them accordingly._
   find /dev -iname \*usb\*
 
 * Modify the Dockerfile to reflect your devices instead of mine.
-  * BlueJeans and Slack need further work. You may want to remove them.
-  * Skype, Discord and Wire work.
+
+While you're editing the Dockerfile anyway...
+BlueJeans and Slack need further work.
+You may want to remove them.
+(Skype, Discord and Wire work.)
 
 * Put the Docker file in a directory, cd over there, and build the container:
 
@@ -60,8 +59,7 @@ _You have to understand what they mean, and modify them accordingly._
 
     ./run.sh
 	
-This starts a new shell that runs inside the container.
-Notice that it uses the chromium.json.
+This starts a new shell that runs inside the container. Notice that it uses the chromium.json.
 	
 * Start whatever conferencing software you want, e.g.
 
@@ -70,7 +68,7 @@ Notice that it uses the chromium.json.
 	nohup skypeforlinux &
 
 
-= Relevant links
+# Relevant links
 
 https://discord.com
 https://wire.com
