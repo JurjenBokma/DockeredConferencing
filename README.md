@@ -70,9 +70,9 @@ This starts a new shell that runs inside the container. Notice that it uses the 
 
 # Relevant links
 
-https://discord.com
-https://wire.com
-https://chromium.googlesource.com/chromium/src/+/master/docs/design/sandbox.md
-https://ndportmann.com/chrome-in-docker/ (really good)
-https://medium.com/better-programming/running-desktop-apps-in-docker-43a70a5265c4
-https://unix.stackexchange.com/questions/66901/how-to-bind-usb-device-under-a-static-name
+* https://discord.com
+* https://wire.com
+* https://chromium.googlesource.com/chromium/src/+/master/docs/design/sandbox.md
+* https://ndportmann.com/chrome-in-docker/ (really good)
+* https://medium.com/better-programming/running-desktop-apps-in-docker-43a70a5265c4
+* https://unix.stackexchange.com/questions/66901/how-to-bind-usb-device-under-a-static-name
